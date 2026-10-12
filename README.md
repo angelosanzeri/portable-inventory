@@ -1,5 +1,8 @@
 <p align="center">
-  <img src="frontend/public/proteo.svg" alt="Proteo" width="112" height="112" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="brand/svg/proteo-logo-white.svg" />
+    <img src="brand/svg/proteo-logo.svg" alt="Proteo" width="320" />
+  </picture>
 </p>
 
 <h1 align="center">Proteo</h1>

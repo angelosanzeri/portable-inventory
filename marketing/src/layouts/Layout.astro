@@ -9,7 +9,7 @@ interface Props {
 
 const { title, description = site.description } = Astro.props;
 const fullTitle = title ? `${title} · ${site.name}` : `${site.name} — ${site.tagline}`;
-const ogImage = new URL("/proteo-logo.png", Astro.site).href;
+const ogImage = new URL("/proteo-og.png", Astro.site).href;
 ---
 
 <!doctype html>

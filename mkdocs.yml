@@ -4,7 +4,7 @@ site_url: https://angesanze.github.io/portable-inventory/
 repo_url: https://github.com/angesanze/portable-inventory
 theme:
   name: material
-  logo: assets/proteo.svg
+  logo: assets/proteo-mark-white.svg
   favicon: assets/proteo.svg
   palette:
     - scheme: default
