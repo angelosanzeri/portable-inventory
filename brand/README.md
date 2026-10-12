@@ -14,7 +14,7 @@ barrel gives the mark depth.
 | `svg/proteo-mark-light-bg.svg` | Mark alone, for light backgrounds |
 | `svg/proteo-mark-white.svg`, `svg/proteo-mark-midnight.svg` | Single-colour mark (print, embossing, overlays) |
 | `svg/proteo-logo.svg` / `-white.svg` | Primary horizontal logo, light / dark backgrounds |
-| `svg/proteo-logo-descriptor.svg` / `-white.svg` | Horizontal logo with the "Gestione inventario" descriptor |
+| `svg/proteo-logo-descriptor.svg` / `-white.svg` | Horizontal logo with the "L’inventario che lavora come te" descriptor |
 | `svg/proteo-logo-stacked.svg` / `-white.svg` | Stacked logo for square spaces |
 | `svg/proteo-logo-mono-midnight.svg` / `-mono-white.svg` | Single-colour logo |
 | `svg/proteo-wordmark.svg` / `-white.svg` | Wordmark alone |
