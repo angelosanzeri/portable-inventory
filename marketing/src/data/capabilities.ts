@@ -1,4 +1,4 @@
-// Inventario COMPLETO delle capacità di Proteo, categorizzato.
+// Inventario COMPLETO delle capacità di Varasto, categorizzato.
 // Verificato sul codice (backend/inventory, frontend/src/features, sdk).
 // Solo claim reali — vedi note: offline = solo widget, notifiche email+webhook,
 // lingue IT+EN, valorizzazione a costo medio ponderato.

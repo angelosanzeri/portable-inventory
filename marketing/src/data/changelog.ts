@@ -12,7 +12,7 @@ export const changelog: ChangelogEntry[] = [
     date: "2026-07-05",
     version: "1.0.0",
     changes: [
-      "Primo rilascio pubblico di Proteo.",
+      "Primo rilascio pubblico di Varasto.",
       "7 profili di tracciamento con 6 motori di calcolo e registro movimenti immutabile.",
       "Gestione multi-azienda con ruoli, licenze e console superadmin.",
       "Widget incorporabile, QR dinamici, import Excel/CSV e API REST con docs OpenAPI.",
