@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <title>Proteo</title>
+  <defs><clipPath id="f"><rect width="128" height="128" rx="28"/></clipPath></defs>
+  <g clip-path="url(#f)">
+  <rect width="128" height="128" fill="#16133a"/>
+  <!-- gills: three blades swept back -->
+  <g transform="translate(10,10)">
+  <g fill="#fb7185">
+    <path d="M50,42 C42,30 32,22 20,17 C30,26 38,36 45,47 Z"/>
+    <path d="M45,51 C34,44 22,40 10,40 C21,45 31,51 41,58 Z"/>
+    <path d="M43,61 C32,60 21,63 11,69 C22,68 32,68 42,68 Z"/>
+  </g>
+  <g fill="#e11d48">
+    <path d="M50,42 C44,34 38,28 31,23 C37,30 42,37 46,45 Z"/>
+    <path d="M45,51 C38,47 31,44 23,42 C30,46 36,50 42,55 Z"/>
+    <path d="M43,61 C36,61 29,62 23,65 C29,65 36,65 42,66 Z"/>
+  </g>
+  <!-- head + neck: one stroke-free shape reading as a P -->
+  <path d="M36,128 L36,58 C36,40 50,30 66,30 C80,30 92,36 99,46 C103,52 101,59 94,62
+           C86,66 76,68 66,68 L64,68 L64,128 Z" fill="#f5f3ff"/>
+  <!-- underside shade -->
+  <path d="M64,68 L66,68 C76,68 86,66 94,62 C98,60 100,57 100,54 C96,60 84,63 72,63 L64,63 Z" fill="#c4b5fd"/>
+  <path d="M54,128 L54,76 L64,68 L64,128 Z" fill="#ddd6fe"/>
+  <!-- eye: small, focused, with lid line -->
+  <path d="M73,45 C76,42 81,42 84,45 C81,48 76,48 73,45 Z" fill="#16133a"/>
+  <path d="M71,42.5 C75,39.5 82,39.5 86,42.5" stroke="#16133a" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <!-- mouth -->
+  <path d="M97,56 C92,58 86,59 80,58.5" stroke="#16133a" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  </g>
+  </g>
+</svg>

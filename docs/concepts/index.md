@@ -1,6 +1,6 @@
 # Core Concepts
 
-Varasto is designed to solve the "Multi-Domain Inventory Problem".
+Proteo is designed to solve the "Multi-Domain Inventory Problem".
 
 ## The Problem
 Construction companies, hospitals, and IT departments manage mixed inventory types:
@@ -11,7 +11,7 @@ Construction companies, hospitals, and IT departments manage mixed inventory typ
 Traditional software forces you to choose between an **Asset Manager** (good for distinct items) or a **WMS** (good for bulk), or hacking it all into a spreadsheet.
 
 ## The Solution
-**Varasto** unifies these worlds using a **Polymorphic Database**.
+**Proteo** unifies these worlds using a **Polymorphic Database**.
 
 ### Key Pillars
 1.  **[Polymorphism](polymorphism.md)**: Separating the "Blueprint" from the "Instance".

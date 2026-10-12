@@ -54,13 +54,13 @@ CSRF_TRUSTED_ORIGINS = [
 # Public, externally-reachable origin used to build absolute links embedded in
 # artifacts that leave the server (e.g. QR codes scanned by phones). Empty in
 # dev → callers fall back to the request origin. Set to e.g.
-# https://app.varasto.example in production.
+# https://app.proteo.example in production.
 PUBLIC_BASE_URL = os.environ.get("PUBLIC_BASE_URL", "").rstrip("/")
 
 # Public origin where the FRONTEND (React SPA) is served. Used to build QR
 # codes and /go/<code>/ redirects so scanned codes land on the frontend's
 # /widget route (Vite proxies /go/* back to backend, so the round-trip works).
-# Default = local Vite dev server. Set to e.g. https://app.varasto.example
+# Default = local Vite dev server. Set to e.g. https://app.proteo.example
 # in production.
 FRONTEND_BASE_URL = os.environ.get("FRONTEND_BASE_URL", "http://localhost:5173").rstrip("/")
 
@@ -206,9 +206,9 @@ REST_FRAMEWORK = {
 }
 
 SPECTACULAR_SETTINGS = {
-    "TITLE": "Varasto API",
+    "TITLE": "Proteo API",
     "DESCRIPTION": (
-        "REST API for the Varasto management system.\n\n"
+        "REST API for the Proteo management system.\n\n"
         "## Authentication\n\n"
         "Two authentication methods are supported:\n\n"
         "- **JWT Bearer Token** — Obtain tokens via `POST /api/token/` with username/password. "

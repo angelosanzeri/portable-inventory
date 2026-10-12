@@ -29,7 +29,7 @@
       "missingApiKey": "Chiave API mancante",
       "camera_denied": "Accesso alla fotocamera negato. Consenti i permessi della fotocamera nelle impostazioni del browser.",
       "no_camera": "Nessuna fotocamera trovata su questo dispositivo.",
-      "invalid_qr": "Questo codice QR non è un codice Varasto valido.",
+      "invalid_qr": "Questo codice QR non è un codice Proteo valido.",
       "expired_code": "Questo codice QR è scaduto o non è più attivo.",
       "locked_code": "Questo codice QR è bloccato e non può essere usato per la scansione.",
       "network_error": "Impossibile raggiungere il server. Controlla la connessione.",

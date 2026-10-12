@@ -1,6 +1,6 @@
 # User Guide
 
-Welcome to the Varasto User Guide. This section is designed to help you navigate and use the application effectively, whether you are a daily user or a system administrator.
+Welcome to the Proteo User Guide. This section is designed to help you navigate and use the application effectively, whether you are a daily user or a system administrator.
 
 ## Available Guides
 

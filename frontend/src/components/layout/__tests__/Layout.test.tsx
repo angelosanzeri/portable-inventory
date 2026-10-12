@@ -168,7 +168,7 @@ describe("Layout", () => {
     it("displays company name from identity", () => {
         renderLayout();
         // Default fallback when no company
-        expect(screen.getByText("Varasto")).toBeTruthy();
+        expect(screen.getByText("Proteo")).toBeTruthy();
     });
 
     describe("breadcrumbs", () => {

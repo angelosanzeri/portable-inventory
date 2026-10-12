@@ -7,7 +7,7 @@ import secrets
 from import_export import resources
 from import_export.admin import ImportExportModelAdmin
 from rangefilter.filters import DateRangeFilterBuilder
-from .admin_site import varasto_admin_site
+from .admin_site import proteo_admin_site
 from .models import ApiKey, AuditLog, Company, User
 
 
@@ -46,7 +46,7 @@ class CompanyAdminForm(forms.ModelForm):
         fields = "__all__"
 
 
-@admin.register(Company, site=varasto_admin_site)
+@admin.register(Company, site=proteo_admin_site)
 class CompanyAdmin(ImportExportModelAdmin):
     form = CompanyAdminForm
     resource_classes = [CompanyResource]
@@ -278,10 +278,10 @@ class CustomUserAdmin(UserAdmin):
         self.message_user(request, f"{updated} user(s) deactivated.", messages.SUCCESS)
 
 
-varasto_admin_site.register(User, CustomUserAdmin)
+proteo_admin_site.register(User, CustomUserAdmin)
 
 
-@admin.register(ApiKey, site=varasto_admin_site)
+@admin.register(ApiKey, site=proteo_admin_site)
 class ApiKeyAdmin(admin.ModelAdmin):
     list_display = (
         "label",
@@ -335,7 +335,7 @@ class ApiKeyAdmin(admin.ModelAdmin):
         self.message_user(request, f"{updated} API key(s) activated.", messages.SUCCESS)
 
 
-@admin.register(AuditLog, site=varasto_admin_site)
+@admin.register(AuditLog, site=proteo_admin_site)
 class AuditLogAdmin(admin.ModelAdmin):
     """Append-only forensic view. AuditLog rows are written by the system,
     never edited or deleted from the admin — add/change/delete are all denied.

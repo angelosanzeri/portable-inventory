@@ -32,7 +32,7 @@ Copy `.env.example` to `.env` and configure:
 | `CORS_ALLOWED_ORIGINS` | Yes | Comma-separated origins (e.g., `https://yourdomain.com`) |
 | `DATABASE_URL` | Yes | PostgreSQL connection string |
 | `SECURE_SSL_REDIRECT` | Recommended | Set to `True` to enforce HTTPS (parsed `== 'True'`; only applied when `DEBUG=0`). Any other value leaves the redirect disabled. |
-| `PUBLIC_BASE_URL` | Production | Public origin (e.g. `https://app.varasto.example`) baked into scanned QR codes; if unset, codes point at the internal host and lead nowhere |
+| `PUBLIC_BASE_URL` | Production | Public origin (e.g. `https://app.proteo.example`) baked into scanned QR codes; if unset, codes point at the internal host and lead nowhere |
 
 > **JWT token lifetimes are not configurable via environment.** They are hardcoded in `settings.py` (`SIMPLE_JWT`): access tokens expire after **15 minutes**, refresh tokens after **7 days**.
 

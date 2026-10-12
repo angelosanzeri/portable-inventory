@@ -1,5 +1,5 @@
 /**
- * Core API Type Definitions for Varasto
+ * Core API Type Definitions for Proteo
  */
 
 // ── Inventory Profile (primary discriminant) ──────────────────────────

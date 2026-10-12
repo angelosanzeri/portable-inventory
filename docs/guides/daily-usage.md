@@ -1,6 +1,6 @@
 # Daily Usage Guide
 
-This guide is for warehouse workers and managers using the Varasto dashboard.
+This guide is for warehouse workers and managers using the Proteo dashboard.
 
 ## Logging In
 1. Navigate to the main dashboard at `http://localhost:5173`.

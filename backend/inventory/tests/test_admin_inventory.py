@@ -1,12 +1,12 @@
 """Inventory-app admin cockpit tests (CLEANUP-09).
 
-Proves every inventory ModelAdmin is wired on the custom ``varasto_admin`` site:
+Proves every inventory ModelAdmin is wired on the custom ``proteo_admin`` site:
 each changelist returns 200, each honours a ``?q=`` search (Django 400s a search
 on an admin with no ``search_fields``), two bulk actions behave (EventLog
 ``resolve_events`` flips status + stamps ``resolved_at``; QR ``lock`` skips a
 VIRGIN code), and the append-only Movement ledger refuses the add view (403).
 
-URLs are reversed on the ``varasto_admin`` namespace; nothing here touches the
+URLs are reversed on the ``proteo_admin`` namespace; nothing here touches the
 default ``/admin/`` registry.
 """
 
@@ -14,7 +14,7 @@ import pytest
 from django.test import Client, override_settings
 from django.urls import reverse
 
-from core.admin_site import varasto_admin_site
+from core.admin_site import proteo_admin_site
 from core.models import User
 from inventory.models import (
     DynamicQRCode,
@@ -24,7 +24,7 @@ from inventory.models import (
 
 from .helpers import make_company, make_simple_product
 
-NS = varasto_admin_site.name  # "varasto_admin"
+NS = proteo_admin_site.name  # "proteo_admin"
 
 # Manifest static storage 500s on uncollected assets under tests; the changelist
 # templates render `{% static %}`, so swap in plain storage (mirrors core admin).

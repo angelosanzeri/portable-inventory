@@ -1,7 +1,7 @@
 """Branded superadmin AdminSite with an ecosystem-intelligence index.
 
 The Django ``/admin/`` is the superuser's only management surface today.
-:class:`VarastoAdminSite` rebrands it and turns the otherwise-empty index page
+:class:`ProteoAdminSite` rebrands it and turns the otherwise-empty index page
 into a platform cockpit: ecosystem-wide totals plus *anomaly panels* that
 surface criticalities (suspended tenants, keyless companies, expired/expiring
 API keys, multi-key managers, stale products, open events) and deep-link into
@@ -28,21 +28,21 @@ STALE_PRODUCT_DAYS = 90
 EXPIRING_KEY_DAYS = 7
 
 
-class VarastoAdminSite(admin.AdminSite):
-    site_header = "Varasto Platform Console"
-    site_title = "Varasto Admin"
+class ProteoAdminSite(admin.AdminSite):
+    site_header = "Proteo Platform Console"
+    site_title = "Proteo Admin"
     index_title = "Ecosystem Overview"
     # Distinct name (not "admin/index.html") so the override is picked up
     # regardless of INSTALLED_APPS order — django.contrib.admin precedes core,
     # so an app-dir "admin/index.html" would never win. This template extends
     # the stock "admin/index.html", keeping the default app/model list.
-    index_template = "admin/varasto_index.html"
+    index_template = "admin/proteo_index.html"
 
     def index(self, request, extra_context=None):
         extra_context = extra_context or {}
-        extra_context.setdefault("varasto_stats", self._ecosystem_stats())
+        extra_context.setdefault("proteo_stats", self._ecosystem_stats())
         extra_context.setdefault(
-            "varasto_anomalies",
+            "proteo_anomalies",
             self._resolve_panel_urls(self._anomaly_panels()),
         )
         return super().index(request, extra_context=extra_context)
@@ -122,7 +122,7 @@ class VarastoAdminSite(admin.AdminSite):
         """Criticality panels: each is a count + a changelist deep-link.
 
         ``changelist`` is the ``<app>_<model>`` slug the template reverses as
-        ``varasto_admin:<changelist>_changelist``; ``query`` is an optional
+        ``proteo_admin:<changelist>_changelist``; ``query`` is an optional
         prefilter querystring (only set where a native list_filter exists).
         """
         from core.models import ApiKey, Company
@@ -210,4 +210,4 @@ class VarastoAdminSite(admin.AdminSite):
         ]
 
 
-varasto_admin_site = VarastoAdminSite(name="varasto_admin")
+proteo_admin_site = ProteoAdminSite(name="proteo_admin")

@@ -13,7 +13,7 @@ related:
 
 # Authentication
 
-Varasto supports two authentication methods depending on the client type.
+Proteo supports two authentication methods depending on the client type.
 
 ## JWT Bearer Tokens (Authority Dashboard)
 

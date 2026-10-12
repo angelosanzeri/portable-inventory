@@ -1,12 +1,12 @@
 """Core-app admin cockpit tests (CLEANUP-08).
 
 Proves the four core ModelAdmins (Company, User, ApiKey, AuditLog) are wired on
-the custom ``varasto_admin`` site: each changelist returns 200, each honours a
+the custom ``proteo_admin`` site: each changelist returns 200, each honours a
 ``?q=`` search (proves ``search_fields`` is set — Django 400s a search on an
 admin with no ``search_fields``), the Company ``suspend_companies`` bulk action
 flips ``is_active``, and the append-only AuditLog refuses the add view (403).
 
-URLs are reversed explicitly on the ``varasto_admin`` namespace; nothing here
+URLs are reversed explicitly on the ``proteo_admin`` namespace; nothing here
 touches the default ``/admin/`` registry.
 """
 
@@ -14,10 +14,10 @@ import pytest
 from django.test import Client, override_settings
 from django.urls import reverse
 
-from core.admin_site import varasto_admin_site
+from core.admin_site import proteo_admin_site
 from core.models import ApiKey, AuditLog, Company, User
 
-NS = varasto_admin_site.name  # "varasto_admin"
+NS = proteo_admin_site.name  # "proteo_admin"
 
 # Manifest static storage 500s on uncollected assets under tests; the changelist
 # templates render `{% static %}`, so swap in plain storage (see test_admin_site).

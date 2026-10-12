@@ -149,7 +149,7 @@ describe("QRScanner", () => {
         await act(async () => { onSuccessRef.current!("BAD1"); });
 
         await waitFor(() => {
-            expect(screen.getByText(/not a valid Varasto code/)).toBeInTheDocument();
+            expect(screen.getByText(/not a valid Proteo code/)).toBeInTheDocument();
             expect(onError).toHaveBeenCalledWith("invalid_qr", expect.any(String));
         });
     });

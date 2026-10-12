@@ -1,4 +1,4 @@
-// I 7 profili di tracciamento di Varasto (il concetto distintivo del prodotto).
+// I 7 profili di tracciamento di Proteo (il concetto distintivo del prodotto).
 // Ogni prodotto ne sceglie uno: determina come si contano le giacenze e quale
 // motore di calcolo le governa. Verificati sul codice (backend/inventory).
 export interface Profile {

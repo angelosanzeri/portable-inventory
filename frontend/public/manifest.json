@@ -1,6 +1,6 @@
 {
-  "name": "Varasto",
-  "short_name": "Varasto",
+  "name": "Proteo",
+  "short_name": "Proteo",
   "description": "Mobile inventory management — scan QR codes, adjust stock, track movements.",
   "start_url": "/?mode=scan",
   "display": "standalone",

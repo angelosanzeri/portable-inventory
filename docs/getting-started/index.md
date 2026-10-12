@@ -1,6 +1,6 @@
 # Getting Started
 
-Follow these instructions to set up **Varasto** on your local machine.
+Follow these instructions to set up **Proteo** on your local machine.
 
 ## Prerequisites
 *   Docker & Docker Compose

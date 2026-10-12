@@ -1,14 +1,18 @@
-# Varasto
+<p align="center">
+  <img src="frontend/public/proteo.svg" alt="Proteo" width="112" height="112" />
+</p>
+
+<h1 align="center">Proteo</h1>
 
 [![Documentation](https://img.shields.io/badge/docs-online-6366f1?logo=materialformkdocs&logoColor=white)](https://angesanze.github.io/portable-inventory/)
 [![CI](https://github.com/angesanze/portable-inventory/actions/workflows/ci.yml/badge.svg)](https://github.com/angesanze/portable-inventory/actions/workflows/ci.yml)
 [![Docs deploy](https://github.com/angesanze/portable-inventory/actions/workflows/docs.yml/badge.svg)](https://github.com/angesanze/portable-inventory/actions/workflows/docs.yml)
 
-> **Naming:** the product is **Varasto**; **`portable-inventory`** is its
+> **Naming:** the product is **Proteo**; **`portable-inventory`** is its
 > technical slug (repository, Docker, package names). Both refer to the same
 > project.
 
-**Varasto** is a modern, open-source system for managing mixed inventory
+**Proteo** is a modern, open-source system for managing mixed inventory
 types — from bulk consumables to serialized assets and perishable batches — in a
 single, unified, multi-tenant interface. Stock behaviour is driven by a
 per-product **profile** (7 profiles → 6 calculation engines), and every change

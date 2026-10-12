@@ -1,5 +1,5 @@
 /**
- * Minimal Service Worker for Varasto widget offline support.
+ * Minimal Service Worker for Proteo widget offline support.
  *
  * Strategy:
  * - Static assets (JS, CSS, HTML, images): cache-first

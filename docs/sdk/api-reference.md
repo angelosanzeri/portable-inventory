@@ -32,7 +32,7 @@ Throws if `apiKey` or `container` is missing.
 | Property | Type | Required | Default | Description |
 |----------|------|----------|---------|-------------|
 | `apiKey` | `string` | Yes | — | API key for authenticating with the widget backend |
-| `baseUrl` | `string` | No | `window.location.origin` | Base URL of the Varasto instance |
+| `baseUrl` | `string` | No | `window.location.origin` | Base URL of the Proteo instance |
 | `container` | `string \| HTMLElement` | Yes | — | CSS selector or DOM element to mount the widget into |
 | `theme` | `ThemeConfig` | No | `DEFAULT_THEME` | Visual theme configuration |
 | `locale` | `string` | No | — | Locale code (e.g. `en`, `fr`) passed to the widget |

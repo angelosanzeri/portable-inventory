@@ -11,7 +11,7 @@ import pytest
 from django.test import Client, override_settings
 from django.urls import reverse
 
-from core.admin_site import varasto_admin_site
+from core.admin_site import proteo_admin_site
 from core.models import User
 
 # The deployed config uses whitenoise's *manifest* static storage, which only
@@ -48,7 +48,7 @@ def test_company_changelist_on_custom_site_is_reachable():
     client = Client()
     client.force_login(su)
 
-    url = reverse(f"{varasto_admin_site.name}:core_company_changelist")
+    url = reverse(f"{proteo_admin_site.name}:core_company_changelist")
     resp = client.get(url)
 
     assert resp.status_code == 200

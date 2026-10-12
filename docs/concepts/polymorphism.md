@@ -1,6 +1,6 @@
 # Polymorphism & Domain Model
 
-Varasto uses a polymorphic domain model to decouple the "Blueprint" of an item from its "Instance".
+Proteo uses a polymorphic domain model to decouple the "Blueprint" of an item from its "Instance".
 
 ## 1. The Product Model (`ProductModel`)
 This represents the **Class** or **Definition** of an item.

@@ -35,7 +35,7 @@ The element auto-mounts when connected to the DOM and auto-destroys when removed
 | Attribute | Type | Required | Description |
 |-----------|------|----------|-------------|
 | `api-key` | string | Yes | API key for authentication. Element does not mount without this. |
-| `base-url` | string | No | Base URL of the Varasto instance |
+| `base-url` | string | No | Base URL of the Proteo instance |
 | `product-id` | string | No | Navigate widget to this product on mount |
 | `location-id` | string | No | Set active location context on mount |
 | `theme-primary` | string | No | Primary accent color (e.g. `#3b82f6`) |

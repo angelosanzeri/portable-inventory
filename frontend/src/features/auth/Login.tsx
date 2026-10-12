@@ -36,7 +36,7 @@ export const Login = () => {
                 <div className="text-center mb-6">
                     <div className="flex items-center justify-center gap-2.5 mb-3">
                         <img
-                            src="/shed-logo.png"
+                            src="/proteo-logo.png"
                             alt={BRAND_NAME}
                             className="w-11 h-11 rounded-xl flex-none object-contain"
                         />

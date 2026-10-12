@@ -1,6 +1,6 @@
 # Inventory Profiles, Engines & Strategies
 
-The core flexibility of Varasto comes from its **profile system**. Instead of
+The core flexibility of Proteo comes from its **profile system**. Instead of
 forcing all items to behave the same way, each `ProductModel` is assigned an
 **inventory profile** — a named, valid combination of three legacy axes
 (`tracking_mode`, `engine_type`, `strategy_type`). There are **7 profiles**

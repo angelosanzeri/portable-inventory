@@ -3,7 +3,7 @@ from django.utils import timezone
 from import_export import resources
 from import_export.admin import ImportExportModelAdmin
 from rangefilter.filters import DateRangeFilterBuilder
-from core.admin_site import varasto_admin_site
+from core.admin_site import proteo_admin_site
 from .models import (
     ProductModel,
     Location,
@@ -35,7 +35,7 @@ from .models import (
 )
 
 
-@admin.register(Movement, site=varasto_admin_site)
+@admin.register(Movement, site=proteo_admin_site)
 class MovementAdmin(ImportExportModelAdmin):
     """Immutable ledger view.
 
@@ -121,7 +121,7 @@ class ProductComponentInline(admin.TabularInline):
     show_change_link = True
 
 
-@admin.register(ProductModel, site=varasto_admin_site)
+@admin.register(ProductModel, site=proteo_admin_site)
 class ProductModelAdmin(admin.ModelAdmin):
     list_display = [
         "sku",
@@ -169,7 +169,7 @@ class ProductModelAdmin(admin.ModelAdmin):
     get_engine_type.short_description = "Engine Type"
 
 
-@admin.register(ProductComponent, site=varasto_admin_site)
+@admin.register(ProductComponent, site=proteo_admin_site)
 class ProductComponentAdmin(admin.ModelAdmin):
     list_display = ("parent", "child", "quantity", "created_at")
     search_fields = (
@@ -183,7 +183,7 @@ class ProductComponentAdmin(admin.ModelAdmin):
     ordering = ("parent__sku",)
 
 
-@admin.register(Location, site=varasto_admin_site)
+@admin.register(Location, site=proteo_admin_site)
 class LocationAdmin(admin.ModelAdmin):
     list_display = ("name", "type", "company", "parent")
     list_filter = ("type", "company")
@@ -194,7 +194,7 @@ class LocationAdmin(admin.ModelAdmin):
     ordering = ("company", "name")
 
 
-@admin.register(PhysicalProduct, site=varasto_admin_site)
+@admin.register(PhysicalProduct, site=proteo_admin_site)
 class PhysicalProductAdmin(admin.ModelAdmin):
     """Per-item view — central to recall and status management."""
 
@@ -242,7 +242,7 @@ class SupplierResource(resources.ModelResource):
         import_id_fields = ("id",)
 
 
-@admin.register(Supplier, site=varasto_admin_site)
+@admin.register(Supplier, site=proteo_admin_site)
 class SupplierAdmin(ImportExportModelAdmin):
     """Fornitore registry — supports bulk CSV/XLSX upload via import-export."""
 
@@ -266,7 +266,7 @@ class SupplierAdmin(ImportExportModelAdmin):
         self.message_user(request, f"{updated} supplier(s) deactivated.")
 
 
-@admin.register(WorkOrder, site=varasto_admin_site)
+@admin.register(WorkOrder, site=proteo_admin_site)
 class WorkOrderAdmin(admin.ModelAdmin):
     """Work order / Kit definition — bulk close/archive lifecycle actions."""
 
@@ -289,7 +289,7 @@ class WorkOrderAdmin(admin.ModelAdmin):
         self.message_user(request, f"{updated} work order(s) archived.")
 
 
-@admin.register(DynamicQRCode, site=varasto_admin_site)
+@admin.register(DynamicQRCode, site=proteo_admin_site)
 class DynamicQRCodeAdmin(admin.ModelAdmin):
     """Dynamic QR codes — lock/unlock respects the VIRGIN→CONFIGURED→LOCKED
     state machine (a VIRGIN code has no target, so it cannot be locked)."""
@@ -340,7 +340,7 @@ class DynamicQRCodeAdmin(admin.ModelAdmin):
         self.message_user(request, f"{updated} QR code(s) unlocked.")
 
 
-@admin.register(ProductBatch, site=varasto_admin_site)
+@admin.register(ProductBatch, site=proteo_admin_site)
 class ProductBatchAdmin(admin.ModelAdmin):
     list_display = (
         "batch_identifier",
@@ -358,7 +358,7 @@ class ProductBatchAdmin(admin.ModelAdmin):
     ordering = ("-created_at",)
 
 
-@admin.register(CalculatorTemplate, site=varasto_admin_site)
+@admin.register(CalculatorTemplate, site=proteo_admin_site)
 class CalculatorTemplateAdmin(admin.ModelAdmin):
     list_display = ("name", "engine_type", "company", "created_at")
     list_filter = ("engine_type", "company")
@@ -368,7 +368,7 @@ class CalculatorTemplateAdmin(admin.ModelAdmin):
     ordering = ("name",)
 
 
-@admin.register(MonitoringRule, site=varasto_admin_site)
+@admin.register(MonitoringRule, site=proteo_admin_site)
 class MonitoringRuleAdmin(admin.ModelAdmin):
     list_display = ("name", "product_model", "trigger_type", "severity", "created_at")
     list_filter = ("trigger_type", "severity")
@@ -378,7 +378,7 @@ class MonitoringRuleAdmin(admin.ModelAdmin):
     ordering = ("-created_at",)
 
 
-@admin.register(EventLog, site=varasto_admin_site)
+@admin.register(EventLog, site=proteo_admin_site)
 class EventLogAdmin(admin.ModelAdmin):
     """Criticality monitoring — resolve/ignore generated events in bulk."""
 
@@ -410,7 +410,7 @@ class EventLogAdmin(admin.ModelAdmin):
 # superadmin cockpit so platform staff can inspect every tenant's records. ──
 
 
-@admin.register(Customer, site=varasto_admin_site)
+@admin.register(Customer, site=proteo_admin_site)
 class CustomerAdmin(admin.ModelAdmin):
     """Cliente registry — mirror of Supplier."""
 
@@ -423,7 +423,7 @@ class CustomerAdmin(admin.ModelAdmin):
     ordering = ("name",)
 
 
-@admin.register(Reservation, site=varasto_admin_site)
+@admin.register(Reservation, site=proteo_admin_site)
 class ReservationAdmin(admin.ModelAdmin):
     list_display = (
         "product_model",
@@ -441,7 +441,7 @@ class ReservationAdmin(admin.ModelAdmin):
     ordering = ("-created_at",)
 
 
-@admin.register(ProductCost, site=varasto_admin_site)
+@admin.register(ProductCost, site=proteo_admin_site)
 class ProductCostAdmin(admin.ModelAdmin):
     """Weighted-average cost state — derived; read-only in the admin."""
 
@@ -465,7 +465,7 @@ class PurchaseOrderLineInline(admin.TabularInline):
     raw_id_fields = ()
 
 
-@admin.register(PurchaseOrder, site=varasto_admin_site)
+@admin.register(PurchaseOrder, site=proteo_admin_site)
 class PurchaseOrderAdmin(admin.ModelAdmin):
     list_display = ("number", "status", "supplier", "company", "expected_at", "created_at")
     list_filter = ("status", "company")
@@ -482,7 +482,7 @@ class SalesOrderLineInline(admin.TabularInline):
     autocomplete_fields = ("product_model",)
 
 
-@admin.register(SalesOrder, site=varasto_admin_site)
+@admin.register(SalesOrder, site=proteo_admin_site)
 class SalesOrderAdmin(admin.ModelAdmin):
     list_display = ("number", "status", "customer", "company", "promised_at", "created_at")
     list_filter = ("status", "company")
@@ -499,7 +499,7 @@ class TransferOrderLineInline(admin.TabularInline):
     autocomplete_fields = ("product_model",)
 
 
-@admin.register(TransferOrder, site=varasto_admin_site)
+@admin.register(TransferOrder, site=proteo_admin_site)
 class TransferOrderAdmin(admin.ModelAdmin):
     list_display = ("number", "status", "from_location", "to_location", "company", "created_at")
     list_filter = ("status", "company")
@@ -516,7 +516,7 @@ class ReturnOrderLineInline(admin.TabularInline):
     autocomplete_fields = ("product_model",)
 
 
-@admin.register(ReturnOrder, site=varasto_admin_site)
+@admin.register(ReturnOrder, site=proteo_admin_site)
 class ReturnOrderAdmin(admin.ModelAdmin):
     list_display = ("number", "kind", "status", "reason_code", "company", "created_at")
     list_filter = ("kind", "status", "company")
@@ -533,7 +533,7 @@ class CountLineInline(admin.TabularInline):
     autocomplete_fields = ("product_model",)
 
 
-@admin.register(CountSession, site=varasto_admin_site)
+@admin.register(CountSession, site=proteo_admin_site)
 class CountSessionAdmin(admin.ModelAdmin):
     list_display = (
         "id",
@@ -552,7 +552,7 @@ class CountSessionAdmin(admin.ModelAdmin):
     inlines = [CountLineInline]
 
 
-@admin.register(NotificationChannel, site=varasto_admin_site)
+@admin.register(NotificationChannel, site=proteo_admin_site)
 class NotificationChannelAdmin(admin.ModelAdmin):
     list_display = ("name", "kind", "is_active", "company", "created_at")
     list_filter = ("kind", "is_active", "company")
@@ -564,7 +564,7 @@ class NotificationChannelAdmin(admin.ModelAdmin):
     exclude = ("secret",)
 
 
-@admin.register(NotificationDelivery, site=varasto_admin_site)
+@admin.register(NotificationDelivery, site=proteo_admin_site)
 class NotificationDeliveryAdmin(admin.ModelAdmin):
     """Delivery attempt log — read-only audit of channel sends."""
 

@@ -1,6 +1,6 @@
 from django.conf import settings
 from django.urls import path, include
-from core.admin_site import varasto_admin_site
+from core.admin_site import proteo_admin_site
 from core.views import CustomTokenObtainPairView
 from rest_framework_simplejwt.views import TokenRefreshView
 from inventory.qr_views import QRRedirectView
@@ -8,7 +8,7 @@ from inventory.qr_views import QRRedirectView
 from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
 
 urlpatterns = [
-    path("admin/", varasto_admin_site.urls),
+    path("admin/", proteo_admin_site.urls),
     path("api/v1/", include("inventory.urls")),
     path("api/token/", CustomTokenObtainPairView.as_view(), name="token_obtain_pair"),
     path("api/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),

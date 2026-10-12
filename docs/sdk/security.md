@@ -16,7 +16,7 @@ related:
 
 # Security
 
-This guide covers the security model of the Varasto Widget SDK: how cross-origin communication is validated, what CSP headers you need, API key scoping, and domain whitelisting.
+This guide covers the security model of the Proteo Widget SDK: how cross-origin communication is validated, what CSP headers you need, API key scoping, and domain whitelisting.
 
 ## Origin Validation
 
@@ -121,7 +121,7 @@ Requests from unlisted origins should receive `403 Forbidden`.
 
 ### SDK-Side Configuration
 
-Set `baseUrl` to your Varasto instance:
+Set `baseUrl` to your Proteo instance:
 
 ```ts
 const widget = new PortableInventory({

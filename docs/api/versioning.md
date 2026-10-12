@@ -13,7 +13,7 @@ related:
 
 # API Versioning Policy
 
-The Varasto REST API is **URL-versioned**. Every endpoint lives under a version
+The Proteo REST API is **URL-versioned**. Every endpoint lives under a version
 prefix:
 
 ```

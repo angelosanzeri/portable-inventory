@@ -1,4 +1,4 @@
-# Revisione del codice & Piano di remediation — Varasto / Portable Inventory
+# Revisione del codice & Piano di remediation — Proteo / Portable Inventory
 
 > **Data:** 2026-06-22
 > **Scope:** intero repository (backend Django ~353 file `.py`, frontend React/TS ~283 `.tsx`, SDK, docs MkDocs — ~106k righe)
@@ -447,7 +447,7 @@ Dashboard che usa `{"error": ...}` invece di `{"detail": ...}` (`views/products.
 | HYG-01 | 🟠 | ✅ | `backend/*.py` (6 file) | Script di debug git-tracked e rotti |
 | HYG-02 | 🟡 | ✅ | root | Manca `README.md` |
 | HYG-03 | 🟡 | ✅ | `.env.example` | Variabili fuorvianti / morte |
-| HYG-04 | ⚪ | ✅ | repo-wide | Drift del nome (Varasto vs portable-inventory) |
+| HYG-04 | ⚪ | ✅ | repo-wide | Drift del nome (Proteo vs portable-inventory) |
 
 **HYG-01 — 🟠 Script di debug git-tracked e rotti** ✅
 `backend/{create_kit,debug_demo_box,inspect_medkit,list_products,repro_500,verify_prod_id}.py`: scratch ad-hoc; 5 puntano a un settings module **inesistente** (`portable_inventory.settings`; il vero è `config.settings`) → non eseguibili. `repro_500.py` contiene una finta password/token. Hanno bypassato l'hook `no-debug-prints` del pre-commit.
@@ -462,8 +462,8 @@ Documenta `ALLOWED_HOSTS` (il codice legge `DJANGO_ALLOWED_HOSTS`, `settings.py:
 **Fix:** allineare a `settings.py`.
 
 **HYG-04 — ⚪ Drift del nome** ✅
-"Varasto" (40 file) vs "portable-inventory" (slug) vs "Portable Inventory".
-**Fix:** dichiararlo una volta (prodotto = Varasto, slug tecnico = portable-inventory) e allineare `mkdocs.yml`.
+"Proteo" (40 file) vs "portable-inventory" (slug) vs "Portable Inventory".
+**Fix:** dichiararlo una volta (prodotto = Proteo, slug tecnico = portable-inventory) e allineare `mkdocs.yml`.
 
 ---
 

@@ -62,7 +62,7 @@ describe('PortableInventory', () => {
       expect(iframe!.style.width).toBe('100%')
       expect(iframe!.style.border).toBeFalsy() // jsdom normalizes 'none' to ''
       expect(iframe!.getAttribute('title')).toBe(
-        'Varasto Widget',
+        'Proteo Widget',
       )
     })
 

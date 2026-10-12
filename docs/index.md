@@ -1,12 +1,12 @@
-# Welcome to Varasto
+# Welcome to Proteo
 
-**Varasto** is a modern, open-source system for managing mixed inventory types—from bulk consumables to serialized assets—in a single, unified interface.
+**Proteo** is a modern, open-source system for managing mixed inventory types—from bulk consumables to serialized assets—in a single, unified interface.
 
 [Get Started](getting-started/index.md){ .md-button .md-button--primary } [View Concepts](concepts/index.md){ .md-button }
 
 ---
 
-## Why Varasto?
+## Why Proteo?
 
 | Feature | Description |
 | :--- | :--- |

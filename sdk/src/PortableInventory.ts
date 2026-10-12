@@ -89,7 +89,7 @@ export class PortableInventory {
     this.iframe.style.width = '100%'
     this.iframe.style.border = 'none'
     this.iframe.style.overflow = 'hidden'
-    this.iframe.setAttribute('title', 'Varasto Widget')
+    this.iframe.setAttribute('title', 'Proteo Widget')
 
     this.setupMessageListener()
     container.appendChild(this.iframe)

@@ -77,7 +77,7 @@ export function SidebarContent({
             {/* Logo / Brand */}
             <div className={`flex items-center gap-3 px-3 py-5 ${collapsed ? "justify-center" : ""}`}>
                 <img
-                    src="/shed-logo.png"
+                    src="/proteo-logo.png"
                     alt={BRAND_NAME}
                     className="w-8 h-8 flex-shrink-0 flex-none rounded-lg object-contain"
                 />

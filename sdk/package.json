@@ -2,7 +2,7 @@
   "name": "@portable-inventory/widget-sdk",
   "version": "0.1.0",
   "type": "module",
-  "description": "JavaScript SDK for embedding Varasto widgets",
+  "description": "JavaScript SDK for embedding Proteo widgets",
   "main": "./dist/portable-inventory-sdk.umd.js",
   "module": "./dist/portable-inventory-sdk.es.js",
   "types": "./dist/index.d.ts",

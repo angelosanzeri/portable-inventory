@@ -67,7 +67,7 @@ describe("SetupWizard", () => {
     describe("Step 1 — Welcome", () => {
         it("renders Welcome heading", () => {
             renderWizard();
-            expect(screen.getByText("Welcome to Varasto")).toBeInTheDocument();
+            expect(screen.getByText("Welcome to Proteo")).toBeInTheDocument();
         });
 
         it("shows what was auto-created", () => {

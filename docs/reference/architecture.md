@@ -2,7 +2,7 @@
 
 ## Overview
 
-Varasto is a modular web application designed for inventory management. It runs as a small set of services orchestrated by Docker Compose. The frontend is exposed directly on its own port and proxies API/admin traffic to the backend; there is no separate reverse proxy.
+Proteo is a modular web application designed for inventory management. It runs as a small set of services orchestrated by Docker Compose. The frontend is exposed directly on its own port and proxies API/admin traffic to the backend; there is no separate reverse proxy.
 
 ## Components
 

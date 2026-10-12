@@ -75,7 +75,7 @@ describe("RegisterPage", () => {
 
     it("renders app name and subtitle", () => {
         renderRegister();
-        expect(screen.getByText("Varasto")).toBeInTheDocument();
+        expect(screen.getByText("Proteo")).toBeInTheDocument();
         expect(screen.getByText("Create your account")).toBeInTheDocument();
     });
 

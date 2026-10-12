@@ -1,6 +1,6 @@
 ---
 type: reference
-title: Getting Started with the Varasto Widget SDK
+title: Getting Started with the Proteo Widget SDK
 created: 2026-04-22
 tags:
   - sdk

@@ -1,9 +1,11 @@
-site_name: Varasto
-# Product name is "Varasto"; "portable-inventory" is the technical slug.
+site_name: Proteo
+# Product name is "Proteo"; "portable-inventory" is the technical slug.
 site_url: https://angesanze.github.io/portable-inventory/
 repo_url: https://github.com/angesanze/portable-inventory
 theme:
   name: material
+  logo: assets/proteo.svg
+  favicon: assets/proteo.svg
   palette:
     - scheme: default
       primary: indigo

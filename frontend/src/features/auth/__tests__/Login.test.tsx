@@ -48,7 +48,7 @@ describe("Login", () => {
 
     it("renders app name and subtitle", () => {
         renderLogin();
-        expect(screen.getByText("Varasto")).toBeInTheDocument();
+        expect(screen.getByText("Proteo")).toBeInTheDocument();
         expect(screen.getByText("Sign in to your account")).toBeInTheDocument();
     });
 

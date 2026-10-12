@@ -1,4 +1,4 @@
-# Varasto — sito marketing (`varasto.rocks`)
+# Proteo — sito marketing (`varasto.rocks`)
 
 One-pager statico che racconta l'app. È un progetto **Astro + Tailwind CSS**
 indipendente dal frontend del gestionale (che vive in `../frontend` ed è servito

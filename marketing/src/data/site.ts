@@ -1,6 +1,6 @@
 // Copy globale e link. Si edita qui — ogni componente legge da questo file.
 export const site = {
-  name: "Varasto",
+  name: "Proteo",
   url: "https://varasto.rocks",
 
   // Hero
